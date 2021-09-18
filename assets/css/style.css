@@ -1,0 +1,130 @@
+
+/*
+Vị trí
+kích trước
+màu sắc
+kiểu dáng ( kiểu chữ, tròn, vuông)
+
+
+Cách style: 
+1. Từ ngoài vào trong
+2. Từ trên xuống dưới
+3. Từ tổng quan đến chi tiết
+
+
+
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+ 
+}
+html{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#header
+{
+height: 50px;
+background-color: black;
+
+position: fixed;
+top: 0px;
+right: 0px;
+left: 0px;
+ 
+}
+
+#nav
+{
+    display: inline-block;
+}
+
+#nav li
+{
+ position: relative;
+}
+
+#nav > li {
+    display: inline-block;
+
+}
+
+#nav > li > a{
+     color: white;
+     text-transform: uppercase;
+
+}
+
+
+
+#nav li a {
+    text-decoration: none;
+    line-height: 50px;
+    padding:  0 30px;
+    display: inline-block;
+}
+
+#nav .subnav li a{
+    width: 100%;
+}
+
+#nav > li:hover > a ,
+#nav .subnav li:hover a
+{
+     background-color: grey;
+}
+
+
+#nav .subnav
+{
+   position:absolute;
+   background-color: wheat;
+   box-shadow: 0 0 10px black;
+   display: none;
+}
+
+.subnav:hover{
+background-color: red;
+}
+
+#nav .subnav a
+{
+color: black; 
+}
+
+#nav li:hover .subnav
+{
+    display: block;
+}
+
+#nav .muitenxuong
+{
+    font-size: 30px;
+}
+#header .search-btn
+{
+    float: right;
+    padding: 0 21px;
+}
+#header .search-icon
+{
+    line-height: 50px;
+    color: white;
+    font-size: 30px;
+}
+
+#header .search-btn:hover
+{
+    background-color: red;
+    cursor:pointer;
+}
+
+#slider
+{
+     margin-top: 50px;
+}
+
