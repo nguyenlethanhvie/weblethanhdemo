@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>The Band</title>
+    
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+ 
+
+</head>
+
+<body>
+
+    <div id="main">
+
+        <div id="header">
+
+            <ul id="nav">
+                <li><a href="">Home</a></li>
+                <li><a href="">Band</a></li>
+                <li><a href="">Tour</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">
+                    More 
+                   <i class="muitenxuong ti-hand-point-down"></i>
+                    
+                </a>
+                
+                    <ul class="subnav">
+                        <li><a href="">Merchandise</a></li>
+                        <li><a href="">Extras</a></li>
+                        <li><a href="">Media</a></li>
+                    </ul>                
+                </li>
+            </ul>
+
+            <div class="search-btn">
+                <i class="search-icon ti-search"></i>
+            </div>
+
+
+        </div>      
+
+
+    
+
+        <div id="slider">
+
+
+        </div>
+
+        <div id="content">
+            <h1 id="lblh1">Hello World</h1>
+
+        </div>
+
+        <div id="footer">
+
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+
+    <video id="preview"></video>
+
+    <script type="text/javascript">
+          let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
+          scanner.addListener('scan', function (content) {
+          //  alert(content);
+           var sss = document.getElementById("lblh1");
+
+            sss.textContent = content;
+          });
+          Instascan.Camera.getCameras().then(function (cameras) {
+            if (cameras.length > 0) {
+              scanner.start(cameras[0]);
+            } else {
+              console.error('No cameras found.');
+            }
+          }).catch(function (e) {
+            console.error(e);
+          });
+        </script>
+
+
+</body>
+</html>
